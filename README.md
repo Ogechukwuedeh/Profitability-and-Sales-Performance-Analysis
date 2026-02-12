@@ -84,21 +84,25 @@ Key components:
 
 The business generates strong revenue but operates on moderate margins, indicating opportunities for profitability optimization.
 
+
 ### Regional Performance
 - Central region recorded the highest profit: $311,403.88
 - Canada region recorded the lowest profit: $17,817.39
 
 This shows uneven market performance and the need for region-specific strategies.
 
+
 ### Profit Leakage Identified
 - Tables sub-category recorded a loss of –$64,083.55
 
 This product line is actively reducing company profitability and requires strategic review.
 
+
 ### Returns Impact
 - Furniture category recorded the highest return rate: 5.92%
 
 Returns increase operational costs and reduce margins.
+
 
 ### Sales vs Profit Relationship
 Profit increases as sales increase, indicating revenue-driven profitability rather than efficiency-driven profitability.
@@ -126,19 +130,23 @@ It is a profit optimization problem.
 - Implement targeted promotional pricing
 - Introduce profit-based pricing models
 
-## Product Portfolio Restructuring
+
+### Product Portfolio Restructuring
 - Scale high-margin products
 - Review or discontinue loss-making items
 - Optimize category performance
+
 
 ## Return Reduction Program
 - Improve quality control
 - Refine product descriptions
 - Enhance packaging and logistics
 
+
 ## Regional Strategy Optimization
 - Increase investment in high-performing regions
 - Redesign product and pricing strategies for underperforming regions
+
 
 ## Shift to Profit-Driven Decision Making
 Move from:
