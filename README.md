@@ -84,31 +84,23 @@ Key components:
 
 The business generates strong revenue but operates on moderate margins, indicating opportunities for profitability optimization.
 
----
-
-## Regional Performance
+### Regional Performance
 - Central region recorded the highest profit: $311,403.88
 - Canada region recorded the lowest profit: $17,817.39
 
 This shows uneven market performance and the need for region-specific strategies.
 
----
-
-## Profit Leakage Identified
+### Profit Leakage Identified
 - Tables sub-category recorded a loss of –$64,083.55
 
 This product line is actively reducing company profitability and requires strategic review.
 
----
-
-## Returns Impact
+### Returns Impact
 - Furniture category recorded the highest return rate: 5.92%
 
 Returns increase operational costs and reduce margins.
 
----
-
-## Sales vs Profit Relationship
+### Sales vs Profit Relationship
 Profit increases as sales increase, indicating revenue-driven profitability rather than efficiency-driven profitability.
 
 The business relies more on volume than strategic product optimization.
