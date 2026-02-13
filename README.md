@@ -186,7 +186,7 @@ It goes beyond visualization to strategic decision support.
 ---
 
 ## Author
-#### Edeh Ogechukwu Evelyn
+### Edeh Ogechukwu Evelyn
 Data Analyst | Power BI | SQL | Business Intelligence
 
 I'm passionate about transforming data into actionable insights that drive smarter decisions and business growth.
