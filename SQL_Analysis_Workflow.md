@@ -2,7 +2,7 @@
 ## Purpose of This Stage
 SQL was used as the core data transformation layer for the Global Superstore analysis.
 
-This stage focused on:
+### This stage focused on:
 - building the database structure
 - importing raw data
 - cleaning import issues
@@ -12,7 +12,7 @@ This stage focused on:
 
 This ensured that Power BI worked with structured, validated, and analysis-ready data.
 
-Database Setup
+### Database Setup
 A dedicated database environment was created for the project.
 ```
 CREATE DATABASE global_superstore;
@@ -97,6 +97,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 ```
+
 ## Importing Returns Data
 ```
 LOAD DATA INFILE
@@ -117,7 +118,7 @@ SELECT COUNT(*) FROM returns;
 SELECT COUNT(*) FROM people;
 ```
 
-Date range validation:
+### Date range validation:
 ```
 SELECT 
 MIN(Order_Date) AS Min_date,
@@ -125,7 +126,7 @@ MAX(Order_Date) AS Max_date
 FROM orders;
 ```
 
-Unique order check:
+### Unique order check:
 ```
 SELECT COUNT(DISTINCT Order_ID) FROM orders;
 ```
@@ -137,13 +138,14 @@ SELECT DISTINCT(Region) FROM orders;
 SELECT DISTINCT(Category) FROM orders;
 SELECT DISTINCT(Segment) FROM orders;
 ```
-This step reveals:
+
+### This step reveals:
 - where revenue originates
 - product structure
 - customer segmentation
 
 ## Business Analysis Queries
-1. Overall Business Performance
+### 1. Overall Business Performance
 ```
 SELECT 
 ROUND(SUM(Sales), 2) AS Total_sales,
@@ -151,12 +153,13 @@ ROUND(SUM(Profit), 2) AS Total_profit,
 ROUND((SUM(Profit) / SUM(Sales)) * 100, 2) AS Profit_margin_percent
 FROM orders;
 ```
-Insight focus:
+
+### Insight focus:
 - revenue strength
 - profitability
 - operational efficiency
 
-2. Market Performance
+### 2. Market Performance
 ```
 SELECT 
 Market,
@@ -167,11 +170,12 @@ FROM orders
 GROUP BY Market
 ORDER BY Total_profit DESC;
 ```
-Purpose:
+
+### Purpose:
 - identify strongest and weakest markets
 - prioritize investments
 
-3. Product Profitability
+### 3. Product Profitability
 ```
 SELECT 
 Category,
@@ -183,18 +187,19 @@ FROM orders
 GROUP BY Category, Sub_Category
 ORDER BY Total_profit DESC;
 ```
-Purpose:
+
+### Purpose:
 - detect loss-making product lines
 - inform product strategy
 
-4. Discount Impact Analysis
+### 4. Discount Impact Analysis
 Created discount bands to measure profitability effects.
 ```
 ALTER TABLE orders
 ADD COLUMN Discount_band VARCHAR(20);
 ```
 
-Classification:
+### Classification:
 ```
 UPDATE orders
 SET Discount_band = CASE
@@ -205,7 +210,7 @@ ELSE 'High'
 END;
 ```
 
-Analysis:
+### Analysis:
 ```
 SELECT
 Discount_band,
@@ -217,7 +222,8 @@ FROM orders
 GROUP BY Discount_band
 ORDER BY Profit_margin DESC;
 ```
-5. Returns vs Profitability
+
+### 5. Returns vs Profitability
 ```
 SELECT
 CASE
@@ -233,10 +239,10 @@ ON o.Order_ID = r.Order_ID
 GROUP BY Return_status;
 ```
 
-Purpose:
+### Purpose:
 - measure operational losses from returns
 
-6. Shipping Mode Efficiency
+### 6. Shipping Mode Efficiency
 ```
 SELECT 
 Ship_Mode,
@@ -249,7 +255,7 @@ GROUP BY Ship_Mode
 ORDER BY Profit_Margin DESC;
 ```
 
-7. Customer Segment Analysis
+### 7. Customer Segment Analysis
 ```
 SELECT
 Segment,
@@ -262,7 +268,7 @@ GROUP BY Segment
 ORDER BY Profit_margin DESC;
 ```
 
-8. Time Trend Analysis
+### 8. Time Trend Analysis
 ```
 SELECT
 YEAR(Order_Date) AS Order_year,
@@ -274,8 +280,8 @@ GROUP BY YEAR(Order_Date), MONTH(Order_Date)
 ORDER BY Order_year, Order_month;
 ```
 
-9. Top and Bottom Products
-Top performers:
+### 9. Top and Bottom Products
+### Top performers:
 ```
 SELECT 
 Product_Name,
@@ -286,7 +292,7 @@ ORDER BY Total_profit DESC
 LIMIT 10;
 ```
 
-Loss-makers:
+### Loss-makers:
 ```
 SELECT
 Product_Name,
