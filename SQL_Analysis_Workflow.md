@@ -96,7 +96,9 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
-Importing Returns Data
+```
+## Importing Returns Data
+```
 LOAD DATA INFILE
 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/Returns.csv'
 INTO TABLE returns
